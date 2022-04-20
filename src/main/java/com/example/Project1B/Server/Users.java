@@ -1,24 +1,20 @@
 package com.example.Project1B.Server;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.List;
 
 public class Users {
 
     private ArrayList<Entity> entities = new ArrayList<>();
-    private ArrayList<User> users = new ArrayList<>();
 
     private static Users instance = null;
 
     private Users(){
-        User u1 = new User("USER1", "PASS1");
-        User u2 = new User("USER2", "PASS2");
-
-        users.add(u1);
-        users.add(u2);
-        entities.add(u1);
-        entities.add(u2);
-        entities.add(new Group("DEFAULT GROUP"));
+        loadUsers();
+        loadGroups();
     }
 
     public static Users getInstance()
@@ -39,49 +35,103 @@ public class Users {
         return null;
     }
 
-    public boolean checkLogin(String login, String password){
-        for(User u : users)
+    public Group getGroupById(String id){
+        for (Entity e : entities)
         {
-            if(u.id.equals(login) && u.password.equals(password))
+            if(e.id.equals(id) && e instanceof Group)
             {
-                return u.logged;
+                return (Group)e;
+            }
+        }
+        return null;
+    }
+
+    public User getUserById(String id){
+        for (Entity e : entities)
+        {
+            if(e.id.equals(id) && e instanceof User)
+            {
+                return (User) e;
+            }
+        }
+        return null;
+    }
+
+    public boolean checkLogin(String login, String password){
+        for(Entity e : entities)
+        {
+            if(e instanceof User) {
+                User u = (User)e;
+                if (u.id.equals(login) && u.password.equals(password)) {
+                    return u.logged;
+                }
             }
         }
         return false;
     }
 
     public boolean tryLogin(Connection connection, String login, String password){
-        for(User u : users)
+        for(Entity e : entities)
         {
-            if(u.id.equals(login) && u.password.equals(password))
-            {
-                u.logged = true;
-                u.connection = connection;
-                return true;
+            if(e instanceof User) {
+                User u = (User) e;
+                if (u.id.equals(login) && u.password.equals(password)) {
+                    u.logged = true;
+                    u.connection = connection;
+                    return true;
+                }
             }
         }
         return false;
     }
 
-    public abstract class Entity {
-        protected String id;
-
-        public Entity(){
-            createId();
-        }
-
-        public abstract void sendMessage(String message);
-        public abstract void dataTransfer(byte[] data);
-
-        public void createId(){
-            id = "";
-            Random random = new Random();
-            for(int i = 0; i < 12; i++)
-            {
-                id += (char)random.nextInt(26) + 65;
+    public boolean logout(String id){
+        for(Entity e : entities)
+        {
+            if(e instanceof User) {
+                User u = (User) e;
+                if (u.id.equals(id) && u.logged) {
+                    u.logged = false;
+                    return true;
+                }
             }
         }
+        return false;
+    }
 
+    private void loadUsers() {
+        try {
+            List<String> lines = Files.readAllLines(new File("C:\\Users\\kubas\\Desktop\\Chat\\src\\Server\\USERS.txt").toPath());
+            for (String s :lines) {
+                String[] data = s.split(":");
+                entities.add(new User(data[0], data[1]));
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadGroups() {
+        try {
+            List<String> lines = Files.readAllLines(new File("C:\\Users\\kubas\\Desktop\\Chat\\src\\Server\\GROUPS.txt").toPath());
+            for (String s :lines) {
+                entities.add(new Group(s));
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadHistory() {
+
+    }
+
+    public abstract class Entity {
+        protected String id;
+        public abstract void sendMessage(String message);
+        public abstract void dataTransfer(byte[] data);
     }
 
     public class User extends Entity {
@@ -108,7 +158,7 @@ public class Users {
 
         @Override
         public void dataTransfer(byte[] data) {
-            connection.sendData(data);
+            connection.sendFile(data);
         }
     }
 
@@ -135,8 +185,7 @@ public class Users {
 
         @Override
         public void dataTransfer(byte[] data) {
-            for(User u:usersInGroup)
-            {
+            for(User u:usersInGroup) {
                 u.dataTransfer(data);
             }
         }

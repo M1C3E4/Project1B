@@ -11,7 +11,7 @@ public class DataBaseProviderSingleton {
 
     private static MongoDatabase mongoDatabase = null;
 
-    public static MongoDatabase createMongoDatabase(){
+    private static MongoDatabase createMongoDatabase(){
         MongoClient mongoClient = new MongoClient("localhost", 27017);
         return mongoClient.getDatabase("test");// ta linijka == nasze pole
     }

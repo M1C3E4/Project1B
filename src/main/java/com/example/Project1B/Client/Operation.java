@@ -8,6 +8,8 @@ public enum Operation {
     SEND_MESSAGE_OK,
     SEND_MESSAGE_FAILED,
 
+    RECEIVE_MESSAGE,
+
     LOGIN,
     LOGIN_OK,
     LOGIN_FAILED,
@@ -20,6 +22,12 @@ public enum Operation {
     GET_HISTORY_OK,
     GET_HISTORY_FAILED,
 
+    JOIN_GROUP,
+    JOIN_GROUP_OK,
+    JOIN_GROUP_FAILED,
+
     LOGOUT,
+    LOGOUT_OK,
+    LOGOUT_FAILED,
 
 }

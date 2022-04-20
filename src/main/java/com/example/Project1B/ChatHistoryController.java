@@ -9,7 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
 @Path("/chat-history")
-public class CharHistoryController {
+public class ChatHistoryController {
 
     @EJB
     DataBaseProviderBean dataBaseProviderBean; //wstrzykniecie obiektu
