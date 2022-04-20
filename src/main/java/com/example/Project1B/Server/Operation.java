@@ -29,4 +29,6 @@ public enum Operation {
     LOGOUT,
     LOGOUT_OK,
     LOGOUT_FAILED,
+
+    TEST
 }

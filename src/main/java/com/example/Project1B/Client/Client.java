@@ -1,5 +1,7 @@
 package com.example.Project1B.Client;
 
+import com.example.Project1B.DataBaseProviderSingleton;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
@@ -46,6 +48,7 @@ public class Client {
             System.out.println("6. CONNECT TO GROUP");
             System.out.println("7. LOGOUT");
             System.out.println("8. EXIT");
+            System.out.println("9. TEST");
             System.out.println("********-------------********");
             choose = scanner.nextInt();
 
@@ -75,6 +78,9 @@ public class Client {
                 case 8:
                     System.out.println("Closing app...");
                     return;
+                case 9:
+                    System.out.println(DataBaseProviderSingleton.getMongoDatabase().getCollection("test").find().first().toJson());
+                    break;
             }
         }
     }

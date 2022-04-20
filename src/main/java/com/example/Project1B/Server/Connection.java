@@ -1,5 +1,7 @@
 package com.example.Project1B.Server;
 
+import com.example.Project1B.DataBaseProviderSingleton;
+
 import java.io.*;
 import java.net.Socket;
 
@@ -142,6 +144,7 @@ public class Connection implements Runnable{
                     sendMessage(Operation.LOGOUT_FAILED.toString());
                 }
                 break;
+
         }
     }
 }

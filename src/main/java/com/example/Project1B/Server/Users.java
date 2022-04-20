@@ -101,7 +101,7 @@ public class Users {
 
     private void loadUsers() {
         try {
-            List<String> lines = Files.readAllLines(new File("C:\\Users\\kubas\\Desktop\\Chat\\src\\Server\\USERS.txt").toPath());
+            List<String> lines = Files.readAllLines(new File("C:\\Users\\Użytkownik\\IdeaProjects\\Project1B\\src\\main\\java\\com\\example\\Project1B\\Server\\USERS.txt").toPath());
             for (String s :lines) {
                 String[] data = s.split(":");
                 entities.add(new User(data[0], data[1]));
@@ -114,7 +114,7 @@ public class Users {
 
     private void loadGroups() {
         try {
-            List<String> lines = Files.readAllLines(new File("C:\\Users\\kubas\\Desktop\\Chat\\src\\Server\\GROUPS.txt").toPath());
+            List<String> lines = Files.readAllLines(new File("C:\\Users\\Użytkownik\\IdeaProjects\\Project1B\\src\\main\\java\\com\\example\\Project1B\\Server\\GROUPS.txt").toPath());
             for (String s :lines) {
                 entities.add(new Group(s));
             }
