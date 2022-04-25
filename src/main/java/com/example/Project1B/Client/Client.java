@@ -61,7 +61,7 @@ public class Client {
                     sendMessage();
                     break;
                 case 3:
-                    //POBIERANIE HISTORII
+                    getHistory();
                     break;
                 case 4:
                     sendFile();
@@ -79,10 +79,20 @@ public class Client {
                     System.out.println("Closing app...");
                     return;
                 case 9:
-                    System.out.println(DataBaseProviderSingleton.getMongoDatabase().getCollection("test").find().first().toJson());
+                    System.out.println(DataBaseProviderSingleton.getMongoDatabase().getCollection("chat-logs").find().first().toJson());
                     break;
             }
         }
+    }
+
+    private void getHistory() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("TYPE USER/GROUP TO GET HISTORY FOR:");
+        String entityId = scanner.next();
+
+        System.out.println("History of messages with " + entityId + ": ");
+        sender.output(login + ":" + password + ":" + Operation.GET_HISTORY + ":" + entityId);
     }
 
     public void sendMessage(){
@@ -148,12 +158,12 @@ public class Client {
         @Override
         public void run() {
             try {
-            while (true) {
-                if (toSend != null) {
-                    writer.println(toSend);
-                    writer.flush();
-                    toSend = null;
-                }
+                while (true) {
+                    if (toSend != null) {
+                        writer.println(toSend);
+                        writer.flush();
+                        toSend = null;
+                    }
                     Thread.sleep(1000);
                 }
             }
