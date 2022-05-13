@@ -13,6 +13,61 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/Chat.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/ChatConroller.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/ChatController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/ChatMessage.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/ChatMessageController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/CommandLineChat.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/Connection.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/HelloResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/JndiContext.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJEE/src/main/java/com/example/ChatJEE/WebSocketConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../ChatLuft/Chat-master/src/Client/Client.java">
           <value>
             <set />
@@ -24,6 +79,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../ChatLuft/Chat-master/src/Server/LogToFile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatLuft/Chat-master/src/Server/Users.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../FIleWriter/src/com/company/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../FIleWriter/src/com/company/history.txt">
           <value>
             <set />
           </value>
