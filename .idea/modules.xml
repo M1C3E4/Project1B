@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Project1B.iml" filepath="$PROJECT_DIR$/Project1B.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee-client/jee-client.iml" filepath="$PROJECT_DIR$/jee-client/jee-client.iml" />
     </modules>
   </component>
 </project>

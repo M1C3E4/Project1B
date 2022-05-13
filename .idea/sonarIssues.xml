@@ -68,6 +68,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../ChatJMS/src/main/java/com/example/ChatJMS/ChatMessageBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../ChatJMS/src/main/java/com/example/ChatJMS/ChatMessageListener.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../ChatLuft/Chat-master/src/Client/Client.java">
           <value>
             <set />
@@ -94,6 +104,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../FIleWriter/src/com/company/history.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jee-client/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jee-client/src/main/java/com/example/Project1B/Client.java">
           <value>
             <set />
           </value>
@@ -138,6 +158,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/example/Project1B/Data.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/example/Project1B/DataBaseProvider.java">
           <value>
             <set />
@@ -159,6 +184,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/example/Project1B/HelloResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/example/Project1B/MessagingService.java">
           <value>
             <set />
           </value>
@@ -194,6 +224,36 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/example/Project1B/Server/Users.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/example/Project1B/User1Provider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/example/Project1B/UserOneData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/example/Project1B/UserOneProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jee-javadev-pro/jee-client/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jee-javadev-pro/src/main/java/pl/training/jee/HelloServlet.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jee-javadev-pro/src/main/java/pl/training/jee/MessagingService.java">
           <value>
             <set />
           </value>
