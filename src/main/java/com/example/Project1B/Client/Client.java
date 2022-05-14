@@ -181,6 +181,7 @@ public class Client {
         }
     }
 
+    //do kogo piszemy i co piszemy
     class Receiver implements Runnable {
 
         private BufferedReader reader;
@@ -204,6 +205,7 @@ public class Client {
             }
         }
 
+        //co piszemy
         public void input(String message) throws IOException {
             String data[] = message.split(":");
             try {
